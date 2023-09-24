@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.oo;
 
+import java.util.Objects;
+
 public class PositionType {
 
     private int id;
@@ -29,6 +31,23 @@ public class PositionType {
 
     public String getValue() {
         return value;
+    }
+
+    public String toString() { return value;}
+
+    @Override
+    public boolean equals(Object o) {
+//       checks if this and 'o' exact same instance of the class (optimized way to check)
+        if (this == o) return true;
+//        checks if this and 'o' are the same class
+        if (o == null || getClass() != o.getClass()) return false;
+        PositionType that = (PositionType) o;
+        return id == that.id && Objects.equals(value, that.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, value);
     }
 
     public void setValue(String value) {

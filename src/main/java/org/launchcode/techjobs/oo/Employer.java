@@ -8,6 +8,7 @@ public class Employer {
     private static int nextId = 1;
     private String value;
 
+//    Automatically takes next id that's ready, uses it, and adds 1 to NextID for next employer
     public Employer() {
         id = nextId;
         nextId++;
