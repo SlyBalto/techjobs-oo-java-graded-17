@@ -8,6 +8,8 @@ public class Job {
     private static int nextId = 1;
 
     private String name;
+//    Really cool how we have the following fields as their own objects instead of just being strings.
+//    making things way more modular, honestly kinda blew my mind!
     private Employer employer;
     private Location location;
     private PositionType positionType;

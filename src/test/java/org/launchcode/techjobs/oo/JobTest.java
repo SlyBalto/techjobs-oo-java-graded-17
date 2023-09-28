@@ -23,7 +23,7 @@ public class JobTest {
         Job jobTest = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-//    this is the only field in Job class that is actually just a String, the rest of them are actually custom objects so we can modularly add more info. for example,
+//    this is the only field in Job class that is actually just a String, the rest of them are actually modular objects, so we can add more info. for example,
 //        we can add extra info for a location. what if we want to add more categories that only fit under "location", etc.?
         assertTrue(jobTest.getName() instanceof String);
         assertEquals("Product tester", jobTest.getName());
