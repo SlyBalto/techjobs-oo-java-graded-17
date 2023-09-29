@@ -15,7 +15,6 @@ public class JobTest {
         Job job2 = new Job();
 
         assertNotEquals(job1.getId(), job2.getId());
-
     }
 
     @Test
@@ -85,15 +84,15 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField() {
-        Job job7 = new Job("", new Employer("House Atreides"), new Location("Castle Caladan"),
-                new PositionType("Defense"), new CoreCompetency("Alertness"));
-        String expectedFormat3 = System.lineSeparator() +
+        Job job7 = new Job("Web Developer", new Employer(""), new Location("StL"),
+                new PositionType(""), new CoreCompetency("Java"));
+        String expectedFormat3 = String.format( System.lineSeparator() +
                 "ID: 3" + System.lineSeparator() +
-                "Name: Data not available" + System.lineSeparator() +
-                "Employer: House Atreides" + System.lineSeparator() +
-                "Location: Castle Caladan" + System.lineSeparator() +
-                "Position Type: Defense" + System.lineSeparator() +
-                "Core Competency: Alertness" + System.lineSeparator();
+                "Name: Web Developer" + System.lineSeparator() +
+                "Employer: Data not available" + System.lineSeparator() +
+                "Location: StL" + System.lineSeparator() +
+                "Position Type: Data not available" + System.lineSeparator() +
+                "Core Competency: Java" + System.lineSeparator(), job7.getId(), job7.getName(), job7.getLocation(), job7.getCoreCompetency());
         String jobString3 = job7.toString();
         assertEquals(expectedFormat3, jobString3);
     }

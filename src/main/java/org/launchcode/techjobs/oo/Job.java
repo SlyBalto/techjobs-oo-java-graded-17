@@ -93,13 +93,13 @@ public class Job {
     }
     public String toString() {
         return System.lineSeparator() + // Starts with blank line
-                "ID: " + this.getId() + System.lineSeparator() +
+            "ID: " + this.getId() + System.lineSeparator() +
 //                name is a String while Employer and others are actually objects so we need to use their getValue methods we made.
-                "Name: " + (this.getName() == null || this.getName().isEmpty() ? "Data not available" : this.getName()) + System.lineSeparator() +
-                "Employer: " + (this.getEmployer().getValue() == null || this.getEmployer().getValue().isEmpty() ? "Data not available" : this.getEmployer().getValue()) + System.lineSeparator() +
-                "Location: " + (this.getLocation().getValue() == null || this.getLocation().getValue().isEmpty() ? "Data not available" : this.getLocation().getValue()) + System.lineSeparator() +
-                "Position Type: " + (this.getPositionType().getValue() == null || this.getPositionType().getValue().isEmpty() ? "Data not available" : this.getPositionType().getValue()) + System.lineSeparator() +
-                "Core Competency: " + (this.getCoreCompetency().getValue() == null || this.getCoreCompetency().getValue().isEmpty() ? "Data not available" : this.getCoreCompetency().getValue()) + System.lineSeparator();// Ends with blank line
+            "Name: " + (this.getName() == null || this.getName().isEmpty() ? "Data not available" : this.getName()) + System.lineSeparator() +
+            "Employer: " + (this.getEmployer().getValue() == null || this.getEmployer().getValue().isEmpty() ? "Data not available" : this.getEmployer().getValue()) + System.lineSeparator() +
+            "Location: " + (this.getLocation().getValue() == null || this.getLocation().getValue().isEmpty() ? "Data not available" : this.getLocation().getValue()) + System.lineSeparator() +
+            "Position Type: " + (this.getPositionType().getValue() == null || this.getPositionType().getValue().isEmpty() ? "Data not available" : this.getPositionType().getValue()) + System.lineSeparator() +
+            "Core Competency: " + (this.getCoreCompetency().getValue() == null || this.getCoreCompetency().getValue().isEmpty() ? "Data not available" : this.getCoreCompetency().getValue()) + System.lineSeparator();// Ends with blank line
     }
 
 } //end of public class Job
